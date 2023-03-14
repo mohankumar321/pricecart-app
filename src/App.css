@@ -1,38 +1,103 @@
-.App {
+.App{
+  overflow:visible ;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin: 2vh;
+  gap: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: sans-serif;
+  font-weight: bolder;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.image{
+ 
+  
+
+ 
+ 
+}
+.setup{
+ 
+  text-align: center;
+  border: 1px solid rgb(18, 17, 17);
+  width: 100%;
+  height: 15vh;
+
+background-color: rgb(7, 15, 15);
+
+
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.index{
+  color: azure;
+  text-align: center;
+  margin: 25px;
+ 
+  font-family: sans-serif;
 }
+.index1{
+ color: rgb(179, 184, 187);
+}
+
+.navbar li{
+  list-style-type: none;
+  padding: 10px;
+  
+
+  text-align: left;
+
+}
+
+.nav{
+margin-right: 10vh;
+  text-align: left;
+}
+#opt{
+  width: 2vh;
+}
+
+.menu:hover{
+
+  color: rgb(36, 213, 60);
+  font-family: sans-serif;
+ 
+}
+.menu{
+  padding: 10px;
+  color: rgb(13, 13, 13);
+  font-family: sans-serif;
+}
+option{
+ 
+  padding: 10px;
+  color: black;
+}
+.cart{
+display: flex;
+position: relative;
+float: right;
+margin-left: 30vh;
+
+
+
+
+}
+
+.number{
+  color: aliceblue;
+  
+border-radius: 50%;
+
+  background-color: black;
+
+
+
+}
+
+.remove{
+  background-color: rgb(252, 28, 28);
+}
+
