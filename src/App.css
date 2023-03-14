@@ -1,5 +1,6 @@
 .App{
-  overflow:visible ;
+
+  overflow:hidden ;
   text-align: center;
   margin: 2vh;
   gap: 2rem;
@@ -8,6 +9,7 @@
   font-family: sans-serif;
   font-weight: bolder;
   flex-wrap: wrap;
+ 
 }
 .sale{
   text-align: center;
@@ -113,3 +115,10 @@ border-radius: 50%;
   background-color: rgb(252, 28, 28);
 }
 
+.foot{
+  color: aliceblue;
+  display: grid;
+  background: black;
+  height: 5vh;
+  margin-top: 50vh;
+}

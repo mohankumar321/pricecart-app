@@ -122,8 +122,11 @@ const [count, setCount]=useState(0)
      setCount={setCount}
 
      />)}
-      
+    
+
+  
     </div>
+    
   );
 }
 export default App;
@@ -169,7 +172,9 @@ function Cards({prod,idx,setCount,count}){
           {prod.cartinfo}</Button>
           </span> }
           </Card.Body>
+        
       </Card>
       
     )   
+  
 }
