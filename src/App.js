@@ -14,6 +14,9 @@ function App() {
       ProductImage:"https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
       ProductName:"Fancy Product",
       Pricefancy:"$40.00 - $80.00",
+      cartinfo:"View Options",
+      
+      
      
 
  
@@ -24,12 +27,19 @@ function App() {
       specialprice:"$20.00",
       special:"$18.00",
       Rating:"⭐⭐⭐⭐⭐",
+      cartremove:"Remove Cart",
+      addcart:"Add To Cart",
+      saletop:"Sale"
+      
     },
     {
       ProductImage:"https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
       ProductName:"Sale item",
       salePrice:"$50.00",
       sale:" $25.00",
+      addcart:"Add To Cart",
+      cartremove:"Remove Cart",
+      saletop:"Sale"
     
     },
     {
@@ -37,18 +47,24 @@ function App() {
       ProductName:"Popular item",
      popularprice:"$40.00",
       Rating:"⭐⭐⭐⭐⭐",
+      addcart:"Add To Cart",
+      cartremove:"Remove Cart",
     },
     {
       ProductImage:"https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
       ProductName:"Sale item",
       salePrice:"$50.00",
       sale:" $25.00",
+      addcart:"Add To Cart",
+      cartremove:"Remove Cart",
+      saletop:"Sale"
 
     },
     {
       ProductImage:"https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
       ProductName:"Fancy Product",
       Pricefancy:"$120.00 - $280.00",
+      cartinfo:"View Options"
       
     },
     {
@@ -57,12 +73,17 @@ function App() {
       specialprice:"$20.00",
       special:"$18.00",
       Rating:"⭐⭐⭐⭐⭐",
+      addcart:"Add To Cart",
+      cartremove:"Remove Cart",
+      saletop:"Sale"
     },
     {
       ProductImage:"https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
       ProductName:"Popular item",
       popularprice:"$40.00",
       Rating:"⭐⭐⭐⭐⭐",
+      addcart:"Add To Cart",
+      cartremove:"Remove Cart",
     }
   ]
 const [count, setCount]=useState(0)
@@ -107,20 +128,24 @@ const [count, setCount]=useState(0)
 }
 export default App;
 function Cards({prod,idx,setCount,count}){
+
   const [show, setShow]= useState(false);
+ 
+  
   
     function handleaddcart(){
     setShow(!show)
     setCount(count+1)
+   
   }
   function handleremovecart(){
     setShow(!show)
     setCount(count-1)
   }
-  
 
   return(
-             <Card key={idx} style={{ width: '16rem' }}>
+   
+             <Card key={idx} style={{ width: '16rem' }}><div className='sale-top'><p className='sale'>{prod.saletop}</p></div>
         <Card.Img variant="top" className='image' src={prod.ProductImage} alt="400x350" />
         <Card.Body>
                   <Card.Title>{prod.ProductName}</Card.Title>
@@ -131,14 +156,20 @@ function Cards({prod,idx,setCount,count}){
           <Card.Text>{prod.Rating} </Card.Text>
           <Card.Text>{prod.Price} </Card.Text>
           <Card.Text>{prod.div} </Card.Text>
+          
+          
+          
          {!show ? <Button className='add'
-         onClick={handleaddcart} >Add to Cart</Button>:
+         onClick={handleaddcart} >{prod.addcart}
+         {prod.cartinfo}</Button>:
          <span>
+         
           <Button className='remove' variant='danger' onClick={handleremovecart}>
-          Remove Cart</Button>
+          {prod.cartremove}
+          {prod.cartinfo}</Button>
           </span> }
           </Card.Body>
       </Card>
-
+      
     )   
 }

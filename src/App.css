@@ -9,7 +9,19 @@
   font-weight: bolder;
   flex-wrap: wrap;
 }
-
+.sale{
+  text-align: center;
+  color: aliceblue;
+  width: 45px;
+  margin-left: 17vh;
+  background-color: rgb(9, 10, 9);
+  text-align: right;
+  font-weight:lighter;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.sale-top{
+  background-color: rgb(224, 225, 226);
+}
 .image{
  
   
